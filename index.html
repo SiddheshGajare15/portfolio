@@ -2,76 +2,99 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <title>Siddhesh | QA Tester Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <h1>Hello, I'm Siddhesh</h1>
-        <p>Web Developer | Software Tester | Farmer  </p>
         <img src="Assets/prof.jpg" alt="Siddhesh's Photo" class="profile-pic">
+        <h1>Hello, I'm Siddhesh</h1>
+        <p>Web Developer | Software Tester | Farmer</p>
     </header>
 
-    <section>
-        <h2>About Me</h2>
-        <p>I’m a passionate software tester with a strong background in manual testing and growing experience in automation using Playwright. I'm well-versed in identifying bugs, writing clear test cases, and ensuring smooth user experiences across web applications. Alongside testing, I have a good understanding of web development fundamentals and SQL, which helps me collaborate effectively with developers and validate backend data. I enjoy learning new tools, solving problems, and being part of a team that builds reliable and user-friendly software.</p>
-    </section>
+    <main>
+        <section>
+            <h2>About Me</h2>
+            <p>
+                I'm a detail-oriented QA Tester with practical experience in manual testing of web applications. I have a solid understanding of the software development lifecycle and a keen eye for ensuring functionality, usability, and reliability. My knowledge of SQL allows me to validate backend data efficiently, and my familiarity with web development helps me better understand application behavior and collaborate smoothly with developers. I’m passionate about quality, enjoy learning new tools and techniques, and thrive in team environments focused on delivering seamless user experiences.
+            </p>
+        </section>
 
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <li>Manual Testing</li>
-            <li>Playwright Automation</li>
-            <li>HTML, CSS, JavaScript, TypeScript, Python</li>
-            <li>SQL</li>
-            <li>Git & GitHub</li>
-        </ul>
-    </section>
+        <section>
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li><strong>Manual Testing</strong> – Test case creation, execution, and defect reporting</li>
+                <li><strong>STLC Knowledge</strong> – Understanding of test planning, design, execution, and closure activities</li>
+                <li><strong>Bug Tracking & Reporting</strong> – Familiar with tools like JIRA, Bugzilla, or similar</li>
+                <li><strong>SQL</strong> – Writing basic to intermediate queries for data validation</li>
+                <li><strong>Web Application Testing</strong> – UI/UX validation, cross-browser testing, responsive design checks</li>
+                <li><strong>Test Documentation</strong> – Test scenarios, test cases, and test summary reports</li>
+                <li><strong>Basic Web Development Knowledge</strong> – HTML, CSS, JavaScript fundamentals for better collaboration with dev teams</li>
+                <li><strong>Agile Methodology</strong> – Exposure to working in Agile/Scrum-based environments</li>
+                <li><strong>Problem Solving</strong> – Analytical thinking and attention to detail</li>
+                <li><strong>Continuous Learning</strong> – Eager to explore new tools and improve testing efficiency</li>
+            </ul>
+        </section>
 
-    <section>
-        <h2>Projects</h2>
-        <ul>
-            <li>E-Commerce Website Testing (Manual + Automation)</li>
-            <li>Bug Report Showcase</li>
-            <li>Portfolio Website</li>
-            <li>Playwright Test Suite for a Login Page</li>
-        </ul>
-    </section>
+        <section>
+            <h2>Projects</h2>
+            <ul>
+                <li>E-Commerce Website Testing (Manual + Automation)</li>
+                <li>Bug Report Showcase</li>
+                <li>Portfolio Website</li>
+                <li>Playwright Test Suite for a Login Page</li>
+            </ul>
+        </section>
 
-    <!-- Contact form (hidden initially, toggled from footer) -->
-    <div id="contact-form" style="display: none; padding: 20px;">
-        <h2>Contact Me</h2>
-        <form action="https://formspree.io/f/movereyg" method="POST">
-            <label>
-                Your email:
-                <input type="email" name="email" required>
-            </label>
-            <label>
-                Your message:
-                <textarea name="message" required></textarea>
-            </label>
-            <button type="submit">Send</button>
-        </form>
-    </div>
+        <section>
+            <h2>My Work</h2>
+            <div class="work-gallery">
+                <div class="work-item">
+                    <h3>Bug Report Sample</h3>
+                    <a href="Assets/bug-report.pdf" target="_blank">View PDF</a>
+                    <div class="rating">
+                        <span>Rate this:</span>
+                        <span class="stars" data-value="0">★★★★★</span>
+                    </div>
+                    <div class="review-form">
+                        <h4>Leave a Review:</h4>
+                        <input type="text" id="reviewer-name" placeholder="Your Name" required>
+                        <textarea id="review-text" placeholder="Write your review..." required></textarea>
+                        <button class="submit-review" onclick="submitReview('Bug Report Sample')">Submit Review</button>
+                        <div id="reviews-display"></div>
+                    </div>
+                </div>
 
-    <footer>
-        <p>Connect with me: siddheshgajare62@gmail.com</p>
-        <div class="social-links">
-            <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://instagram.com/yourusername" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
-        <br>
-        <button onclick="toggleForm()">Contact Us</button>
-    </footer>
+                <div class="work-item">
+                    <h3>Test Case Sheet</h3>
+                    <a href="Assets/test-cases.xlsx" target="_blank">View Excel</a>
+                    <div class="rating">
+                        <span>Rate this:</span>
+                        <span class="stars" data-value="0">★★★★★</span>
+                    </div>
+                    <div class="review-form">
+                        <h4>Leave a Review:</h4>
+                        <input type="text" id="reviewer-name" placeholder="Your Name" required>
+                        <textarea id="review-text" placeholder="Write your review..." required></textarea>
+                        <button class="submit-review" onclick="submitReview('Test Case Sheet')">Submit Review</button>
+                        <div id="reviews-display"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <script>
-        function toggleForm() {
-            const form = document.getElementById('contact-form');
-            form.style.display = form.style.display === 'none' ? 'block' : 'none';
-            form.scrollIntoView({ behavior: 'smooth' });
-        }
-    </script>
+        <footer>
+            <p>Connect with me: siddheshgajare62@gmail.com</p>
+            <div class="social-links">
+                <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/siddhesh_gajare_45/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <button onclick="toggleForm()">Contact Me</button>
+        </footer>
+    </main>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="app.js"></script> <!-- Add your script link here -->
 </body>
 </html>
